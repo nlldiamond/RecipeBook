@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="images/VercelIcon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Team</title>
+    <link rel = "stylesheet" href ="devCSS.css">
+</head>
+<body>
+    
+     <section class = "about">
+        <header>  
+            <div class="logo-title">
+                <a href="#" class="logo"> M </a>
+                <h3>EVERYDAY ULAM</h3>
+            </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+            <div class="navigation">
+                <a href="index.html">HOME</a>
+                <a href="dev_team.html">ABOUT</a>
+                <a href="login.html">LOGIN</a>
+            </div>
+        </header>
+        
+        <div class = "main">
+            <img src = "images/zoomedniru.jpg">
+            <div class = "about-text">
+            <h1>Neil Diamond Rosete</h1>
+            <h5>Main Developer</h5>
+            <p>Passionate about technology from an early age, I am a 23 year old IT enthusiast with hands-on experience and a solid understanding of computer systems. My goal is to build a successful career in IT, leveraging my strong technical aptitude and ability to rapidly learn and apply new skills. </p>
+        </div>
+        </div>
+    <div class = "about1">
+    <div class = "main1">
+            <img src = "images/blankpfp.jpg">
+            <div class = "about-text1">
+            <h1>About Me</h1>
+            <h5>Secondary Developer</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        </div>
+    </div>
+    <div class = "about2">
+        <div class = "main2">
+                <img src = "images/blankpfp.jpg ">
+                <div class = "about-text2">
+                <h1>About Me</h1>
+                <h5>Tertiary Developer</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+        <div class="mission-vision">
+            <div class="page mission">
+                <h1>Our Mission</h1>
+                <p>The goal of Everyday Ulam is to provide cheap and easy to make dishes without compromising on the tastes.</p>
+            </div>
+
+            <div class="page vision">
+                <h1>Our Vision</h1>
+                <p>We aim to become the number one recipe provider to improve the lives of homecooks and learn a lot from us when it comes to cooking world class dishes.</p>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <p> Everyday Ulam All rights Reserved <br> Since 2022
+            </p>
+        </div>
+        
+<script>
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".navigation a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+
+    function toggleMenu() {
+    document.querySelector('.navigation').classList.toggle('show');
+
+    function toggleMenu() {
+    document.querySelector('.navigation').classList.toggle('show');
+    document.querySelector('.hamburger').classList.toggle('active');
+}
+
+}
+
+</script>
+</body>
+</html>

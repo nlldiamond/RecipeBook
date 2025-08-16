@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/VercelIcon.svg" />
+
+</head>
+<body>
+
+<header>  
+    <div class="logo-title">
+        <a href="#" class="logo">M</a>
+        <h3>EVERYDAY ULAM</h3>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="navigation">
+        <a href="index.html">HOME</a>
+        <a href="dev_team.html">ABOUT</a>
+        <a href="login.html">LOGIN</a>
+    </div>
+</header>
+
+<div class="content">
+    <div class="info">
+        <h2>A place where recipes <span><br> & people meet</span></h2>
+        <br>
+        <p>Simple but flavorful food can be eaten on a budget! 
+        What you must understand is that you must learn how to balance ingredients in your recipes so that they 
+        are full of ingredients that will all help you stay within your budget. This entails spending the 
+        time to research the costs of ingredients that you are aware are affordable.</p>
+        
+        <p class="secondary-text">Thinking about what to cook next? 
+        Sign up now to get more recipe ideas, share your own dishes, 
+        and find out what the rest of the community are making and eating!</p>
+        <br><br><br>
+
+        <div class="media-icons">
+            <a href="https://www.facebook.com/ninongry/about" class="fa fa-facebook"></a>
+            <a href="https://www.youtube.com/NinongRy" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/mrnigelng/" class="fa fa-instagram"></a>
+        </div>
+    </div>
+</div>
+
+<div class="extra">
+    <div class="container">
+        <div class="box">
+            <div class="icon">TIP</div>
+            <div class="laman">
+                <h2>Lorem Ipsum</h2>
+                <p>hLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="icon">HACK</div>
+            <div class="laman">
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="icon">TIP</div>
+            <div class="laman">
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page1">
+    <h1>Start cooking in an instant.</h1>
+    <p>Getting tired of cooking the same thing over and over again? Can't think of what to cook?
+        Well this is the perfect website to wash those problems away!</p>
+</div>
+
+<div class="page2">
+    <h1>TOP 3</h1>
+    <p>Pinoy recipe dishes:</p>
+
+    <div class="blog-container">
+        <!--box-1------------->
+        <div class="blog-box">
+            <div class="blog-img">
+                <img alt="blog" src="images/menudo.jpg">
+            </div>
+            <div class="blog-text">
+                <span>140 pesos / 3 servings</span>
+                <h4>MENUDO</h4>
+                <p>1 tomato sauce<br>
+                   1 patatas<br>
+                   1 carrots......
+                </p>
+                <a href="login.html">Read More</a>
+            </div>
+        </div>
+
+        <!--box-2------------->
+        <div class="blog-box">
+            <div class="blog-img">
+                <img alt="blog" src="images/sinigang.jpg">
+            </div>
+            <div class="blog-text">
+                <span>180 pesos / 3 servings</span>
+                <h4>Sinigang</h4>
+                <p>1 sinigang mix<br>
+                   1 pc gabi<br>
+                   1/5 kl pork.....
+                </p>
+                <a href="login.html">Read More</a>
+            </div>
+        </div>
+
+        <!--box-3------------->
+        <div class="blog-box">
+            <div class="blog-img">
+                <img alt="blog" src="images/dinuguan.jpg">
+            </div>
+            <div class="blog-text">
+                <span>160 pesos / 3 servings</span>
+                <h4>Dinuguan</h4>
+                <p>1kl atay ng baboy<br>
+                   1/2 cup pigs blood
+                </p>
+                <a href="login.html">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page3">
+    <h1>What are you <br> waiting for?</h1>
+    <p>Use the internet as your best cookbook!</p>
+</div>
+
+<div class="footer">
+    <p>Everyday Ulam All rights Reserved <br> Since 2022</p>
+</div>
+
+<script>
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".navigation a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+
+    // function toggleMenu() {
+    //     document.querySelector('.navigation').classList.toggle('show');
+    //     document.querySelector('.hamburger').classList.toggle('active');
+    // }
+
+ 
+    function toggleMenu() {
+        const nav = document.querySelector('.navigation');
+        const burger = document.querySelector('.hamburger');
+        nav.classList.toggle('show');
+        burger.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

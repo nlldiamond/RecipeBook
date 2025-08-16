@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,900;1,200;1,300;1,500;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* ---- SECTION (no bg here anymore; moved to .content) ---- */
+section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: none; /* was Home.png */
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%; /* fixed from 100 */
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background-color: #fffffdbd;
+}
+
+/* hide hamburger by default (will show on mobile) */
+.hamburger { display: none; }
+
+header .logo{
+    position: relative;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    background-color: #343F56;
+    padding: 2px 10px;
+    border-radius: 100px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between M logo and text */
+}
+
+.logo-title h3 {
+    color: #343F56;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header .navigation a{
+    position: relative;
+    right: 25%;
+    color: #343F56;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    text-decoration: unset;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 30px;
+}
+
+header .navigation a:not(:last-child){
+    margin-right: 50px;
+}
+
+header .navigation a:hover{
+    background-color: #FB9300;
+}
+
+/* ---- CONTENT gets the Home.png background, full-width ---- */
+.content{
+    position: relative;
+    width: 100%;
+    background: url("images/Home.png") no-repeat center;
+    background-size: cover;
+    padding: 60px 0;              /* vertical space for the hero */
+}
+
+/* Keep your content at 1000px max width like before */
+.content .info{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;               /* safe side padding for small screens */
+}
+
+.content .info h2{
+    color: #ffb3b3;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 80px;
+    margin-bottom: 30px;
+}
+
+.content .info h2 span{
+    color: #f8c885;
+    font-family: "Poppins", sans-serif;   
+    font-size: 90px;
+    font-weight: 800;
+}
+
+.content .info p{
+    font-family: "Poppins", sans-serif;
+    color: rgb(245, 237, 226);
+    letter-spacing: 0px;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.content .info p1{
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 246, 235);
+    text-shadow: #ffffff;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* Keep desktop layout; fix on mobile via media query */
+/* Desktop: right aligned */
+.content .media-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px; /* even spacing between icons */
+    margin-top: 25px;
+    position: static;
+}
+
+.content .media-icons a {
+    color: #FB9300;
+    font-size: 50px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.content .media-icons a:hover {
+    transform: scale(1.5);
+}
+
+/* Mobile: centered */
+@media (max-width: 768px) {
+    .content .media-icons {
+        justify-content: center !important;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .content .media-icons a {
+        font-size: 36px;
+    }
+}
+
+
+/* ---- EXTRA SECTION BG stays, ensure responsive fill ---- */
+.extra{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url("images/2.png") no-repeat center;
+    background-size: cover;
+}
+
+.container{
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container .box{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: rgb(255, 254, 241);
+    box-shadow: 0 5px 15px rgb(48, 48, 48);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+}
+
+.container .box .icon{
+    position: relative;
+    width: 150px;
+    height: 80px;
+    color: #000000;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 5%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.container .box:nth-child(1) .icon{
+    box-shadow: 0 0 0 0 #F54748;
+    background: #f8c885;
+}
+
+.container .box:nth-child(1):hover .icon{
+    box-shadow: 0 0 0 400px #FB9300;
+}
+
+.container .box:nth-child(2) .icon{
+    box-shadow: 0 0 0 0 #a495f8;
+    background: #5894ee;
+}
+
+.container .box:nth-child(2):hover .icon{
+    box-shadow: 0 0 0 400px #2c35b4;
+}
+
+.container .box:nth-child(3) .icon{
+    box-shadow: 0 0 0 0 #94fcae;
+    background: #bfffc4;
+}
+
+.container .box:nth-child(3):hover .icon{
+    box-shadow: 0 0 0 400px #21e282;
+}
+
+
+.container .box .laman{
+    position: relative;
+    z-index: 1;
+    transition: 0.05s;
+}
+
+.container .box:hover .laman{
+    color: rgb(0, 0, 0);
+}
+
+.container .box .laman h2{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+    color: rgb(255, 254, 241);
+}
+
+.container .box .laman p{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    color: rgb(255, 254, 241);
+}
+
+/* ---- PAGES: remove fixed viewport widths; keep your backgrounds ---- */
+.page1{
+    position: relative;
+    width: 100%;                  /* was 204.8vh */
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("images/3.png") no-repeat center;
+    background-size: cover;
+    font-size: 30px;
+}
+
+.page1 h1{
+    max-width: 1000px;
+    margin: 10px 250px;
+}
+
+.page1 p{
+    max-width: 1000px;
+    margin: 0px 250px;
+}
+
+.page2{
+    position: relative;
+    width: 100%;                  /* was 204.8vh */
+    min-height: 80vh;             /* was fixed 125vh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("images/4.png") no-repeat center;
+    background-size: cover;
+    font-size: 30px;
+    align-items: center;
+}
+
+#blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.blog-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog-heading span{
+    color: #f33c3c;
+}
+.blog-heading h3{
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    font-weight: 600;
+}
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+ 
+.blog-box{
+    width: 350px;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    margin: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    box-sizing: border-box;
+}
+
+.blog-img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.blog-text{
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog-text span{
+    color: #f33c3c;
+    font-size: 0.9rem;
+}
+.blog-text .blog-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #272727;
+}
+.blog-text p{
+    color: #9b9b9b;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text h4{
+    color: #0f0f0f;
+}
+.blog-text a{
+    color: #0f0f0f;
+    font-size: medium;
+    font-style: italic;
+}
+.blog-text a:hover{
+    color: #ff9100;
+    transition: all ease 0.3s;
+}
+
+.page3{
+    position: relative;
+    width: 100%;                  /* was 204.8vh */
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("images/5.png") no-repeat center;
+    background-size: cover;
+    font-size: 30px;
+}
+
+.page3 h1{
+    max-width: 1000px;
+    margin: 10px 250px;
+}
+
+.page3 p{
+    max-width: 1000px;
+    margin: 0px 250px;
+}
+
+.footer{
+    text-align: center;
+    padding: 40px;
+    background-color: rgb(17, 5, 63);
+    background-size: 50px;
+    color: white;
+    font-size: smaller;
+}
+
+/* Active page indicator */
+header .navigation a.active {
+  background-color: #FB9300;
+}
+
+header .navigation a.active::after {
+  width: 60%;
+}
+
+/* ---------- Responsive Adjustments (kept & focused) ---------- */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+    /* hero text scales down a bit */
+    .content .info h2, 
+    .content .info h2 span {
+        font-size: 60px;
+        line-height: 65px;
+    }
+    /* prevent horizontal scroll on tablets */
+    .page1, .page2, .page3 {
+        width: 100%;
+    }
+}
+
+/* ---- Mobile: nav dropdown + centered content/icons ---- */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    /* Mobile nav dropdown (hidden by default; toggled with .show) */
+    header .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #ffffffee;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 15px 0;
+        z-index: 1000;
+    }
+    header .navigation.show {
+        display: flex;
+    }
+    header .navigation a {
+        right: auto;
+        font-size: 20px;
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+
+    /* Hamburger visible on mobile */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #343F56;
+        transition: 0.3s;
+    }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    /* Content padding tighter on small screens */
+    .content { padding: 40px 0; }
+    .content .info { padding: 0 16px; }
+
+    .content .info h2, 
+    .content .info h2 span {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .content .info p {
+        font-size: 18px;
+    }
+    .content .info p1 {
+        font-size: 16px;
+    }
+
+    /* Media icons: center & space nicely on mobile */
+    .content .media-icons {
+        justify-content: center;
+        left: 0;
+        margin-top: 20px;
+        letter-spacing: 0;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+    .content .media-icons a {
+        font-size: 36px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* Sections smaller on mobile and no horizontal scroll */
+    .page1, .page2, .page3 {
+        min-height: auto;
+        font-size: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    /* Center page text on narrow screens */
+    .page1 h1, .page2 h1, .page3 h1,
+    .page1 p, .page2 p, .page3 p {
+        margin: 10px auto;
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    /* Page2 flexible height */
+    .page2 { min-height: auto; }
+}
+
+@media (max-width: 480px) {
+    .content .info h2, 
+    .content .info h2 span {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .content .info p {
+        font-size: 16px;
+    }
+    .content .info p1 {
+        font-size: 14px;
+    }
+    .content .media-icons a {
+        font-size: 32px;
+    }
+    .blog-box {
+        width: 95%;
+    }
+}
+
+/* Hide "Everyday Ulam" */
+@media (max-width: 768px) {
+    .logo-title h3 {
+        display: none;
+    }
+}

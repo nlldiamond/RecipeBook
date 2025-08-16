@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="images/VercelIcon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everyday Ulam Member</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="wrap">
+            <form id="loginForm">
+                <h2>Login Here</h2>
+                <p>ADMIN or MEMBER?</p>
+                <div class="form-group">
+                    <input type="text" placeholder="Email or Phone" id="username" required>
+                    <input type="password" placeholder="Password" id="password" required>
+
+                    <button type="submit" class="btn" id="mybtn">Login</button>
+                </div>
+
+                <div class="social">
+                    <div class="go"><a href="index.html"> Go Back </a></div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Credentials section -->
+        <div class="credentials">
+            <button type="button" class="toggle-hint">Show Credentials ▼</button>
+            <div class="login-hint" id="loginHint">
+                <p><strong>Members:</strong> user / 1234</p>
+                <p><strong>Admins:</strong> admin / 5678</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script>
+        const toggleBtn = document.querySelector(".toggle-hint");
+        const hint = document.querySelector(".login-hint");
+
+        toggleBtn.addEventListener("click", function() {
+            if (hint.style.display === "none" || hint.style.display === "") {
+                hint.style.display = "block";
+                this.textContent = "Hide Credentials ▲";
+            } else {
+                hint.style.display = "none";
+                this.textContent = "Show Credentials ▼";
+            }
+        });
+        
+        hint.style.display = "none";
+    </script>
+</body>
+</html>

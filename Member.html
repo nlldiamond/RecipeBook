@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="member.css"> 
+        <link rel="icon" type="image/svg+xml" href="images/VercelIcon.svg" />
+        <title>Recipe Book</title>
+    </head>
+    <body>
+    <section class="main-header">
+        <header>
+            <div class="logo-title">
+                <a href="#" class="logo"> M </a>
+                <h3>EVERYDAY ULAM</h3>
+            </div>
+
+            <!-- Hamburger menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navigation">
+                <a href="Member.html">HOME</a>
+                <a href="Pinoy.html">PINOY DISHES</a>
+                <a href="Dessert.html">DESSERTS</a>
+                <a href="Inter.html">INTERNATIONAL</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="info">
+                <h2>A place where recipes <span><br>& people meet</span></h2>
+                <br>
+                <p>Welcome Back Members!</p>
+                <p1>Thinking about what to cook next? Sign up now to get more recipe ideas, share your own dishes, 
+                    and find out what the rest of the community are making and eating!
+                </p1>
+                <br>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- PROMOTIONAL CONTENT FOR MEMBERS -->
+    <section class="member-promo">
+        <div class="promo-overlay">
+            <h2>Exclusive Perks for Our Members</h2>
+            <p>As a valued member of Everyday Ulam, you get access to more than just recipes!</p>
+
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <img src="images/Pinoy1.png" alt="Exclusive Recipes">
+                    <h3>Exclusive Recipes</h3>
+                    <p>Get early access to new dishes before they’re published for everyone else.</p>
+                </div>
+                <div class="promo-card">
+                    <img src="images/Dessert1.png" alt="Community Challenges">
+                    <h3>Community Challenges</h3>
+                    <p>Join monthly cooking challenges and win exciting prizes!</p>
+                </div>
+                <div class="promo-card">
+                    <img src="images/Inter1.png" alt="Live Cooking Events">
+                    <h3>Live Cooking Events</h3>
+                    <p>Attend virtual cooking classes hosted by our top recipe creators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <div class="back">
+            <h3> <a href="index.html">Go Back to Main page</a></h3>
+            
+        </div>
+
+        <div class="footer">
+                <p> Everyday Ulam All rights Reserved <br> Since 2022
+                </p>
+        </div>
+
+<script>
+    // Highlight active page
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".navigation a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+
+    // Toggle menu
+    function toggleMenu() {
+        document.querySelector('.navigation').classList.toggle('show');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+</script>
+
+
+</body>
+</html>

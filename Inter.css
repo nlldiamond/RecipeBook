@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,900;1,200;1,300;1,500;1,900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; color: #333; background-color: #fffaf5; }
+
+/* ===== Hero section background (same look as Member) ===== */
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Always fill the screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Main header section background */
+section.main-header {
+    background: url("images/ey.png") no-repeat center center;
+    background-size: cover;
+}
+
+/* ===== Header (copied from Member style) ===== */
+header {
+  width: 100%;
+  padding: 10px 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background-color: #fffffdbd;
+}
+
+.logo-title { display: flex; align-items: center; gap: 15px; }
+
+.logo {
+  color: #ffffff;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  background-color: #343F56;
+  padding: 2px 10px;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+header h3 {
+  color: #343F56;
+  font-size: 40px;
+  font-weight: 1000;
+  letter-spacing: 2px;
+}
+
+.navigation { display: flex; align-items: center; gap: 40px; }
+.navigation a {
+  position: relative;
+  color: #343F56;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: color .3s ease;
+}
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background-color: #FB9300;
+  transition: width .3s ease, left .3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.navigation a:hover { color: #FB9300; }
+.navigation a:hover::after { width: 60%; }
+
+/* ===== Hero copy ===== */
+.content {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.content .info h2{
+    color: #ffb3b3;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.content .info h2 span{
+    color: #f8c885;
+    font-family: "Poppins", sans-serif;   
+    font-size: 90px;
+    font-weight: 800;
+}
+
+.content .info p{
+    font-family: "Poppins", sans-serif;
+    color: rgb(245, 237, 226);
+    letter-spacing: 0px;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.content .info p1{
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 246, 235);
+    text-shadow: #ffffff;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* ===== Carousel ===== */
+.post-slider {
+  position: relative;
+  margin: 30px auto 10px;
+  max-width: 1200px;
+  background: #fff5ef;
+  border-radius: 12px;
+  padding: 26px 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.slider-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ff7043;
+}
+
+/* Let Slick manage layout; hide until initialized to avoid FOUC */
+.post-wrapper { display: none; }
+.post-wrapper.slick-initialized { display: block; }
+
+.post {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+.post:hover { transform: translateY(-3px); }
+
+.slider-image { width: 100%; height: 200px; object-fit: cover; display: block; }
+.post-info { padding: 12px 14px; font-size: 14px; color: #666; }
+.post-info h4 { margin: 0 0 8px; font-size: 18px; color: #333; }
+
+/* Arrows */
+.post-slider .prev, .post-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: #fff;
+  color: #343F56;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  cursor: pointer;
+  z-index: 2;
+}
+.post-slider .prev { left: 10px; }
+.post-slider .next { right: 10px; }
+
+/* ===== Section heading ===== */
+.headings { text-align: center; margin: 40px 0 10px; }
+.headings h3 { font-size: 26px; color: #ff7043; }
+
+/* ===== Recipe sections (alternating) ===== */
+.page2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff5ef;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Alternate only among .page2 blocks */
+.page2:nth-of-type(even) { flex-direction: row-reverse; }
+
+.page2-img img { border-radius: 12px; max-width: 100%; height: auto; }
+
+.Ingredients, .Proced { flex: 1; }
+.Ingredients h1 { color: #ff7043; margin-bottom: 10px; }
+.Ingredients p, .Proced p { font-weight: 700; margin: 10px 0 6px; }
+.Ingredients p1, .Proced p1 { font-size: .95rem; line-height: 1.6; display: block; }
+
+/* ===== Footer (if used) ===== */
+.footer { text-align: center; padding: 30px; background-color: #11053f; color: white; font-size: 12px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  header { padding: 10px 20px; height: auto; flex-wrap: wrap; gap: 12px; }
+  .navigation { gap: 16px; flex-wrap: wrap; }
+  .content { margin: 30px auto; padding: 0 16px; }
+  .content .info h2 { font-size: 44px; }
+  .post-slider { padding: 22px 42px; }
+  .page2 { flex-direction: column; text-align: center; }
+}
+
+
+section.main-header,
+.member-promo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 60px 0;
+}
