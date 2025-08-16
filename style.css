@@ -93,7 +93,6 @@ header .navigation a:hover{
     padding: 60px 0;              /* vertical space for the hero */
 }
 
-/* Keep your content at 1000px max width like before */
 .content .info{
     max-width: 1000px;
     margin: 0 auto;
@@ -138,8 +137,6 @@ header .navigation a:hover{
     margin-bottom: 40px;
 }
 
-/* Keep desktop layout; fix on mobile via media query */
-/* Desktop: right aligned */
 .content .media-icons {
     display: flex;
     justify-content: flex-end;
@@ -184,6 +181,7 @@ header .navigation a:hover{
     background-size: cover;
 }
 
+/* tip hack tip */
 .container{
     position: relative;
     margin-top: 10%;
@@ -275,7 +273,22 @@ header .navigation a:hover{
     color: rgb(255, 254, 241);
 }
 
-/* ---- PAGES: remove fixed viewport widths; keep your backgrounds ---- */
+/* Same effect as hover pag touch */
+.container .box:nth-child(1).active .icon {
+    box-shadow: 0 0 0 400px #FB9300;
+}
+.container .box:nth-child(2).active .icon {
+    box-shadow: 0 0 0 400px #2c35b4;
+}
+.container .box:nth-child(3).active .icon {
+    box-shadow: 0 0 0 400px #21e282;
+}
+
+.container .box.active .laman {
+    color: rgb(0, 0, 0);
+}
+
+
 .page1{
     position: relative;
     width: 100%;                  /* was 204.8vh */
@@ -467,7 +480,7 @@ header .navigation a.active::after {
 }
 
 /* ---- Mobile: nav dropdown + centered content/icons ---- */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     header {
         flex-wrap: wrap;
         height: auto;
@@ -521,6 +534,7 @@ header .navigation a.active::after {
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translateY(-8px);
     }
+
 
     /* Content padding tighter on small screens */
     .content { padding: 40px 0; }
@@ -601,7 +615,7 @@ header .navigation a.active::after {
 }
 
 /* Hide "Everyday Ulam" */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     .logo-title h3 {
         display: none;
     }

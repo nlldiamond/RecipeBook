@@ -169,6 +169,13 @@
         nav.classList.toggle('show');
         burger.classList.toggle('active');
     }
+    
+      document.querySelectorAll(".container .box").forEach(box => {
+    box.addEventListener("click", () => {
+      // Toggle active class on tap/click
+      box.classList.toggle("active");
+    });
+  })
 </script>
 
 </body>

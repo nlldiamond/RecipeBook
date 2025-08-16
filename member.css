@@ -273,7 +273,7 @@ header .navigation a.active::after { width: 60%; }
 }
 
 /* Responsive header */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     .logo-title h3 { display: none; }
     .hamburger { display: flex; margin-left: auto; }
     header {
@@ -298,7 +298,7 @@ header .navigation a.active::after { width: 60%; }
 }
 
 /* Responsive member-promo */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     .member-promo {
         flex-direction: column;
         text-align: center;
@@ -328,50 +328,9 @@ header .navigation a.active::after { width: 60%; }
 }
 
 /* Fix parallax issue on phones */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
   .member-promo { background-attachment: scroll; }
 }
 
-/* Responsive content text */
-@media (max-width: 768px) {
-  .content {
-    max-width: 100%;   /* let it take full width */
-    padding: 40px 15px;
-  }
 
-  .content .info h2 {
-    font-size: 48px;
-    line-height: 1.2;
-  }
 
-  .content .info h2 span {
-    font-size: 48px;
-  }
-
-  .content .info p {
-    font-size: 18px;
-  }
-
-  .content .info p1 {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .content {
-    padding: 30px 12px;
-  }
-
-  .content .info h2,
-  .content .info h2 span {
-    font-size: 32px;
-  }
-
-  .content .info p {
-    font-size: 16px;
-  }
-
-  .content .info p1 {
-    font-size: 14px;
-  }
-}

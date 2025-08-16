@@ -236,7 +236,7 @@ header h3 {
   header { padding: 10px 20px; height: auto; flex-wrap: wrap; gap: 12px; }
   .navigation { gap: 16px; flex-wrap: wrap; }
   .content { margin: 30px auto; padding: 0 16px; }
-  .content .info h2 { font-size: 44px; }
+  /* .content .info h2 { font-size: 44px; } */
   .post-slider { padding: 22px 42px; }
   .page2 { flex-direction: column; text-align: center; }
 }
@@ -322,7 +322,7 @@ header .navigation a.active::after {
 }
 
 /* Responsive header */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -363,7 +363,7 @@ header .navigation a.active::after {
 }
 
 /* Responsive recipe sections (page2 and similar) */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     .page2 {
         flex-direction: column !important;  /* stack vertically */
         align-items: center !important;

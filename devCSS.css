@@ -187,7 +187,7 @@ header .navigation a:hover {
     background-color: #fefefe;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     .mission-vision {
         flex-direction: column;
     }
@@ -248,7 +248,7 @@ header .navigation a.active::after {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     .logo-title {
         flex-direction: column;
         gap: 5px;
@@ -305,23 +305,64 @@ header .navigation a.active::after {
     }
 }
 
-/* Hamburger menu styles */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
+/* ---- Mobile: nav dropdown + centered content/icons ---- */
+@media (max-width: 1226px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 20px;
+    }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #343F56;
-    border-radius: 2px;
-}
+    /* Mobile nav dropdown (hidden by default; toggled with .show) */
+    header .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #ffffffee;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 15px 0;
+        z-index: 1000;
+    }
+    header .navigation.show {
+        display: flex;
+    }
+    header .navigation a {
+        right: auto;
+        font-size: 20px;
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+
+    /* Hamburger visible on mobile */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #343F56;
+        transition: 0.3s;
+    }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
 
 /* Hide navigation by default on small screens */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -350,24 +391,9 @@ header .navigation a.active::after {
     }
 }
 
-/* Smooth hamburger animation */
-.hamburger span {
-    transition: all 0.3s ease;
-}
-
-/* Hamburger turns into "X" when active */
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
 
 /* Mobile nav drop-down animation */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     header .navigation {
         transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
         overflow: hidden;
@@ -391,14 +417,14 @@ header .navigation a.active::after {
 
 
 /* Keep active highlight on mobile */
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     header .navigation a.active {
         background-color: #FB9300;
         display: block;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     .logo-title h3 {
         display: none; /* hide the large title text */
     }
@@ -408,7 +434,7 @@ header .navigation a.active::after {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -450,7 +476,7 @@ header .navigation a.active::after {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1226px) {
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -500,4 +526,15 @@ header .navigation a.active::after {
         text-align: center;
         margin: 10px 0;
     }
+}
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
 }
